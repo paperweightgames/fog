@@ -7,6 +7,7 @@ namespace Cam
     public class CameraRotate : MonoBehaviour
     {
         [SerializeField] private float _sensitivity;
+        [SerializeField] private float _maxPitch;
         [SerializeField] private InputActionReference _lookAction;
         private Vector2 _input;
         private Vector3 _rotation;
@@ -35,6 +36,7 @@ namespace Cam
         private void Update()
         {
             _rotation += new Vector3(-_input.y, _input.x, 0) * _sensitivity;
+            _rotation.x = Mathf.Clamp(_rotation.x, -_maxPitch, _maxPitch);
             transform.rotation = Quaternion.Euler(_rotation);
         }
     }

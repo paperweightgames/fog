@@ -131,7 +131,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  _offset: {x: 0, y: 0, z: 0}
+  _offset: {x: 1, y: 1.5, z: -3}
+  _zoomSensitivity: 0.3
+  _minZoom: -3
+  _maxZoom: 0
+  _zoomAction: {fileID: 7558782409264158272, guid: 299a01464ad843940a878e98f23f5bdf, type: 3}
 --- !u!114 &585879853883727087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,4 +149,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sensitivity: 0.1
+  _maxPitch: 80
   _lookAction: {fileID: -4729779483861665458, guid: 299a01464ad843940a878e98f23f5bdf, type: 3}
