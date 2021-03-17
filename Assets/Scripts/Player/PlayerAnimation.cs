@@ -4,6 +4,7 @@ namespace Player
 {
     public class PlayerAnimation : MonoBehaviour
     {
+        [SerializeField] private GroundCheck _groundCheck;
         [SerializeField] private Rigidbody _rb;
         private Animator _animator;
         private int _animation = Idle;
@@ -19,7 +20,7 @@ namespace Player
         private void Update()
         {
             var velocity = _rb.velocity;
-            if (Mathf.Abs(velocity.y) > .1)
+            if (!_groundCheck.IsGrounded())
                 SetAnimation(Jump);
             else if (Mathf.Abs(velocity.x) + Mathf.Abs(velocity.z) > .1)
                 SetAnimation(Run);
