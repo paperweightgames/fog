@@ -20,6 +20,14 @@
                     "expectedControlType": "Analog",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Look",
+                    "type": "PassThrough",
+                    "id": "afd3bba2-97cb-41b2-a267-264342e23307",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -86,6 +94,17 @@
                     "processors": "",
                     "groups": "Keyboard & Mouse",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa388265-d3e9-4a21-a9da-67805066d50d",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
