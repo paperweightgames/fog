@@ -126,7 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae58148c97a1b37468f4ff75539ba3b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
+  _speed: 3
   _jumpHeight: 5
+  _camera: {fileID: 0}
   _moveAction: {fileID: 5649417210719030314, guid: 299a01464ad843940a878e98f23f5bdf, type: 3}
   _jumpAction: {fileID: 692280338423060989, guid: 299a01464ad843940a878e98f23f5bdf, type: 3}

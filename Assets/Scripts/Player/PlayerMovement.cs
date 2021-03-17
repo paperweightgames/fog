@@ -8,6 +8,7 @@ namespace Player
     {
         [SerializeField] private float _speed;
         [SerializeField] private float _jumpHeight;
+        [SerializeField] private Transform _camera;
         [SerializeField] private InputActionReference _moveAction;
         [SerializeField] private InputActionReference _jumpAction;
         private Vector2 _input;
@@ -47,8 +48,9 @@ namespace Player
         {
             var velocity = _rb.velocity;
             // Move.
-            velocity.x = _speed * _input.x;
-            velocity.z = _speed * _input.y;
+            var moveVelocity = GetMoveVelocity();
+            velocity.x = moveVelocity.x;
+            velocity.z = moveVelocity.z;
             // Jump.
             if (_jumping)
             {
@@ -56,6 +58,17 @@ namespace Player
                 velocity.y = _jumpHeight;
             }
             _rb.velocity = velocity;
+        }
+
+        private Vector3 GetMoveVelocity()
+        {
+            var right = _camera.right;
+            var forward = _camera.forward;
+            var cameraRight = new Vector3(right.x, 0, right.z).normalized;
+            var cameraForward = new Vector3(forward.x, 0, forward.z).normalized;
+            var xVel = _speed * _input.x * cameraRight;
+            var yVel = _speed * _input.y * cameraForward;
+            return xVel + yVel;
         }
     }
 }
