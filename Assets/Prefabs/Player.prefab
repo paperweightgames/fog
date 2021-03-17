@@ -107,6 +107,7 @@ MonoBehaviour:
   _speed: 3
   _jumpHeight: 5
   _camera: {fileID: 0}
+  _groundCheck: {fileID: 1751889249830072576}
   _moveAction: {fileID: 5649417210719030314, guid: 299a01464ad843940a878e98f23f5bdf, type: 3}
   _jumpAction: {fileID: 692280338423060989, guid: 299a01464ad843940a878e98f23f5bdf, type: 3}
 --- !u!1001 &1529684624111218430
@@ -171,6 +172,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 99220621770841625, guid: 6d70cd5b6abfedb4cae7cc9c789b7e6e, type: 3}
   m_PrefabInstance: {fileID: 1529684624111218430}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1751889249830072576 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 969819774101282814, guid: 6d70cd5b6abfedb4cae7cc9c789b7e6e, type: 3}
+  m_PrefabInstance: {fileID: 1529684624111218430}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e4281b39e11e64baae9e26c6032437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1947182714926994112
 PrefabInstance:
   m_ObjectHideFlags: 0

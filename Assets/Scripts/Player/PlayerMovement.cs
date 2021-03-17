@@ -9,6 +9,7 @@ namespace Player
         [SerializeField] private float _speed;
         [SerializeField] private float _jumpHeight;
         [SerializeField] private Transform _camera;
+        [SerializeField] private GroundCheck _groundCheck;
         [SerializeField] private InputActionReference _moveAction;
         [SerializeField] private InputActionReference _jumpAction;
         private Vector2 _input;
@@ -52,7 +53,7 @@ namespace Player
             velocity.x = moveVelocity.x;
             velocity.z = moveVelocity.z;
             // Jump.
-            if (_jumping)
+            if (_jumping && _groundCheck.IsGrounded())
             {
                 _jumping = false;
                 velocity.y = _jumpHeight;
