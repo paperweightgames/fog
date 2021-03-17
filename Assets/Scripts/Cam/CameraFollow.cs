@@ -37,8 +37,17 @@ namespace Cam
 
         private void Update()
         {
-            var targetPosition = _target.position + GetOffset();
-            transform.position = targetPosition;
+            var targetPos = _target.position;
+            var finalPos = targetPos + GetOffset();
+            // Clipping.
+            var rayDirection = (finalPos - targetPos).normalized;
+            var rayDistance = Vector3.Distance(finalPos, targetPos);
+            var ray = new Ray(targetPos, rayDirection);
+            if (Physics.Raycast(ray, out var hit, rayDistance))
+            {
+                finalPos = hit.point + transform.forward * .1f;
+            }
+            transform.position = finalPos;
         }
 
         private Vector3 GetOffset()
