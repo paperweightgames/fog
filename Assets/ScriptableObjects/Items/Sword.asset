@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   _name: Sword
-  _value: 10
-  _weight: 100
-  _maxStack: 5
+  _icon: {fileID: 21300000, guid: 201b0a52f9b89b9459e1f5a364c56570, type: 3}
+  _stackSize: 3
