@@ -2,8 +2,18 @@
 {
     public class Slot
     {
-        private Item _item;
+        private readonly Item _item;
         private int _quantity;
+
+        public bool IsEmpty()
+        {
+            return _item == null;
+        }
+        public Slot()
+        {
+            _item = null;
+            _quantity = 0;
+        }
 
         public Slot(Item item, int quantity)
         {
